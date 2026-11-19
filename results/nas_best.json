@@ -1,0 +1,161 @@
+{
+  "winner": {
+    "trial": 10,
+    "parent_trial": 6,
+    "config": {
+      "resolution": 32,
+      "blocks": [
+        {
+          "channels": 12,
+          "kernel": 3,
+          "op": "conv",
+          "activation": "silu"
+        },
+        {
+          "channels": 24,
+          "kernel": 5,
+          "op": "conv",
+          "activation": "silu"
+        },
+        {
+          "channels": 12,
+          "kernel": 3,
+          "op": "conv",
+          "activation": "relu6"
+        },
+        {
+          "channels": 12,
+          "kernel": 3,
+          "op": "conv",
+          "activation": "relu6"
+        },
+        {
+          "channels": 24,
+          "kernel": 5,
+          "op": "separable",
+          "activation": "relu"
+        },
+        {
+          "channels": 24,
+          "kernel": 5,
+          "op": "conv",
+          "activation": "silu"
+        }
+      ]
+    },
+    "storage_bytes": 111808,
+    "p50_ms": 0.24845499999999998,
+    "p95_ms": 1.8147961999999997,
+    "peak_rss_mib": 46.1875,
+    "peak_rss_growth_mib": 11.5,
+    "threads": 1,
+    "warmup": 20,
+    "repeats": 100,
+    "accepted": true,
+    "reason": "",
+    "val_accuracy": 0.3198
+  },
+  "limits": {
+    "p50_ms": 2.0,
+    "storage_bytes": 131072,
+    "peak_rss_mib": null
+  },
+  "seed": 42,
+  "split_seed": 71,
+  "population": 4,
+  "trials": 12,
+  "proxy_epochs": 3,
+  "proxy_train_limit": 5000,
+  "final_epochs": 6,
+  "final_train_limit": 0,
+  "final_seed": 42,
+  "final_batch_size": 128,
+  "final_lr": 0.001,
+  "final_metrics": {
+    "architecture": "nas",
+    "dataset": "cifar10",
+    "method": "evolution",
+    "labels": [
+      "airplane",
+      "automobile",
+      "bird",
+      "cat",
+      "deer",
+      "dog",
+      "frog",
+      "horse",
+      "ship",
+      "truck"
+    ],
+    "config": {
+      "resolution": 32,
+      "blocks": [
+        {
+          "channels": 12,
+          "kernel": 3,
+          "op": "conv",
+          "activation": "silu"
+        },
+        {
+          "channels": 24,
+          "kernel": 5,
+          "op": "conv",
+          "activation": "silu"
+        },
+        {
+          "channels": 12,
+          "kernel": 3,
+          "op": "conv",
+          "activation": "relu6"
+        },
+        {
+          "channels": 12,
+          "kernel": 3,
+          "op": "conv",
+          "activation": "relu6"
+        },
+        {
+          "channels": 24,
+          "kernel": 5,
+          "op": "separable",
+          "activation": "relu"
+        },
+        {
+          "channels": 24,
+          "kernel": 5,
+          "op": "conv",
+          "activation": "silu"
+        }
+      ]
+    },
+    "resolution": 32,
+    "search_trial": 10,
+    "tag": "nas_best",
+    "best_epoch": 6,
+    "epochs": 6,
+    "seed": 42,
+    "split_seed": 71,
+    "lr": 0.001,
+    "batch_size": 128,
+    "train_examples": 45000,
+    "val_examples": 5000,
+    "val_accuracy": 0.584,
+    "optimization_seconds": 504.2792548550001,
+    "test_accuracy": 0.596,
+    "test_loss": 1.118673164176941,
+    "test_examples": 10000
+  },
+  "final_profile": {
+    "storage_bytes": 112289,
+    "p50_ms": 0.298188,
+    "p95_ms": 0.3631115,
+    "peak_rss_mib": 46.19921875,
+    "peak_rss_growth_mib": 11.51171875,
+    "threads": 1,
+    "warmup": 20,
+    "repeats": 100
+  },
+  "final_resource_violations": [],
+  "search_threads": 2,
+  "final_threads": 3
+}

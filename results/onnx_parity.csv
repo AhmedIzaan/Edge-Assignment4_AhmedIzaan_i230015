@@ -1,0 +1,8 @@
+model,tested_batch,max_abs_logit_error,matching_top1
+efficientnet_lite0_baseline,3,7.62939453125e-06,True
+efficientnet_lite0_kd,3,7.62939453125e-06,True
+mobilenetv2_baseline,3,4.76837158203125e-06,True
+mobilenetv2_kd,3,3.337860107421875e-06,True
+nas_best,3,2.86102294921875e-06,True
+squeezenet_baseline,3,1.1920928955078125e-06,True
+squeezenet_kd,3,1.6689300537109375e-06,True

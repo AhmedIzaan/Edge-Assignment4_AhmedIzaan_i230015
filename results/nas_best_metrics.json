@@ -1,0 +1,74 @@
+{
+  "architecture": "nas",
+  "dataset": "cifar10",
+  "method": "evolution",
+  "labels": [
+    "airplane",
+    "automobile",
+    "bird",
+    "cat",
+    "deer",
+    "dog",
+    "frog",
+    "horse",
+    "ship",
+    "truck"
+  ],
+  "config": {
+    "resolution": 32,
+    "blocks": [
+      {
+        "channels": 12,
+        "kernel": 3,
+        "op": "conv",
+        "activation": "silu"
+      },
+      {
+        "channels": 24,
+        "kernel": 5,
+        "op": "conv",
+        "activation": "silu"
+      },
+      {
+        "channels": 12,
+        "kernel": 3,
+        "op": "conv",
+        "activation": "relu6"
+      },
+      {
+        "channels": 12,
+        "kernel": 3,
+        "op": "conv",
+        "activation": "relu6"
+      },
+      {
+        "channels": 24,
+        "kernel": 5,
+        "op": "separable",
+        "activation": "relu"
+      },
+      {
+        "channels": 24,
+        "kernel": 5,
+        "op": "conv",
+        "activation": "silu"
+      }
+    ]
+  },
+  "resolution": 32,
+  "search_trial": 10,
+  "tag": "nas_best",
+  "best_epoch": 6,
+  "epochs": 6,
+  "seed": 42,
+  "split_seed": 71,
+  "lr": 0.001,
+  "batch_size": 128,
+  "train_examples": 45000,
+  "val_examples": 5000,
+  "val_accuracy": 0.584,
+  "optimization_seconds": 504.2792548550001,
+  "test_accuracy": 0.596,
+  "test_loss": 1.118673164176941,
+  "test_examples": 10000
+}

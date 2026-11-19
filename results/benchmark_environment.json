@@ -1,0 +1,12 @@
+{
+  "cpu": "AMD EPYC 7763 64-Core Processor",
+  "platform": "Linux-6.18.57-x86_64-with-glibc2.41",
+  "python": "3.12.14",
+  "pytorch": "2.6.0+cpu",
+  "onnxruntime": "1.21.1",
+  "provider": "CPUExecutionProvider",
+  "precision": "FP32",
+  "batch_size": 1,
+  "timing_scope": "ONNX session.run with already prepared tensor",
+  "memory_scope": "process-wide peak RSS, including interpreter and runtime"
+}

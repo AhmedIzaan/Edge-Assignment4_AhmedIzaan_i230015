@@ -1,0 +1,596 @@
+[
+  {
+    "trial": 1,
+    "parent_trial": null,
+    "config": {
+      "resolution": 32,
+      "blocks": [
+        {
+          "channels": 12,
+          "kernel": 5,
+          "op": "conv",
+          "activation": "relu"
+        },
+        {
+          "channels": 16,
+          "kernel": 3,
+          "op": "conv",
+          "activation": "silu"
+        }
+      ]
+    },
+    "storage_bytes": 13039,
+    "p50_ms": 0.12071599999999999,
+    "p95_ms": 0.16389355,
+    "peak_rss_mib": 45.8828125,
+    "peak_rss_growth_mib": 11.19921875,
+    "threads": 1,
+    "warmup": 20,
+    "repeats": 100,
+    "accepted": true,
+    "reason": "",
+    "val_accuracy": 0.1948
+  },
+  {
+    "trial": 2,
+    "parent_trial": null,
+    "config": {
+      "resolution": 24,
+      "blocks": [
+        {
+          "channels": 12,
+          "kernel": 3,
+          "op": "conv",
+          "activation": "relu"
+        },
+        {
+          "channels": 48,
+          "kernel": 3,
+          "op": "conv",
+          "activation": "silu"
+        }
+      ]
+    },
+    "storage_bytes": 25972,
+    "p50_ms": 0.08190800000000001,
+    "p95_ms": 0.17305589999999998,
+    "peak_rss_mib": 45.875,
+    "peak_rss_growth_mib": 11.19921875,
+    "threads": 1,
+    "warmup": 20,
+    "repeats": 100,
+    "accepted": true,
+    "reason": "",
+    "val_accuracy": 0.2448
+  },
+  {
+    "trial": 3,
+    "parent_trial": null,
+    "config": {
+      "resolution": 32,
+      "blocks": [
+        {
+          "channels": 32,
+          "kernel": 3,
+          "op": "separable",
+          "activation": "silu"
+        },
+        {
+          "channels": 24,
+          "kernel": 3,
+          "op": "conv",
+          "activation": "silu"
+        },
+        {
+          "channels": 32,
+          "kernel": 5,
+          "op": "separable",
+          "activation": "relu"
+        },
+        {
+          "channels": 16,
+          "kernel": 5,
+          "op": "conv",
+          "activation": "relu"
+        },
+        {
+          "channels": 32,
+          "kernel": 3,
+          "op": "separable",
+          "activation": "relu6"
+        },
+        {
+          "channels": 48,
+          "kernel": 5,
+          "op": "conv",
+          "activation": "silu"
+        }
+      ]
+    },
+    "storage_bytes": 249521,
+    "p50_ms": 0.352835,
+    "p95_ms": 0.45994644999999995,
+    "peak_rss_mib": 46.60546875,
+    "peak_rss_growth_mib": 11.90625,
+    "threads": 1,
+    "warmup": 20,
+    "repeats": 100,
+    "accepted": false,
+    "reason": "storage_bytes",
+    "val_accuracy": null
+  },
+  {
+    "trial": 4,
+    "parent_trial": null,
+    "config": {
+      "resolution": 24,
+      "blocks": [
+        {
+          "channels": 12,
+          "kernel": 5,
+          "op": "conv",
+          "activation": "silu"
+        },
+        {
+          "channels": 24,
+          "kernel": 5,
+          "op": "conv",
+          "activation": "silu"
+        },
+        {
+          "channels": 12,
+          "kernel": 3,
+          "op": "conv",
+          "activation": "relu6"
+        },
+        {
+          "channels": 12,
+          "kernel": 3,
+          "op": "conv",
+          "activation": "relu6"
+        },
+        {
+          "channels": 24,
+          "kernel": 5,
+          "op": "separable",
+          "activation": "relu"
+        },
+        {
+          "channels": 24,
+          "kernel": 5,
+          "op": "conv",
+          "activation": "silu"
+        }
+      ]
+    },
+    "storage_bytes": 114112,
+    "p50_ms": 0.1650585,
+    "p95_ms": 0.26276134999999995,
+    "peak_rss_mib": 46.109375,
+    "peak_rss_growth_mib": 11.421875,
+    "threads": 1,
+    "warmup": 20,
+    "repeats": 100,
+    "accepted": true,
+    "reason": "",
+    "val_accuracy": 0.3058
+  },
+  {
+    "trial": 5,
+    "parent_trial": 4,
+    "config": {
+      "resolution": 24,
+      "blocks": [
+        {
+          "channels": 12,
+          "kernel": 5,
+          "op": "conv",
+          "activation": "silu"
+        },
+        {
+          "channels": 12,
+          "kernel": 3,
+          "op": "conv",
+          "activation": "relu6"
+        },
+        {
+          "channels": 12,
+          "kernel": 3,
+          "op": "conv",
+          "activation": "relu6"
+        },
+        {
+          "channels": 24,
+          "kernel": 5,
+          "op": "separable",
+          "activation": "relu"
+        },
+        {
+          "channels": 24,
+          "kernel": 5,
+          "op": "conv",
+          "activation": "silu"
+        }
+      ]
+    },
+    "storage_bytes": 79471,
+    "p50_ms": 0.146514,
+    "p95_ms": 0.2098193,
+    "peak_rss_mib": 46.03515625,
+    "peak_rss_growth_mib": 11.35546875,
+    "threads": 1,
+    "warmup": 20,
+    "repeats": 100,
+    "accepted": true,
+    "reason": "",
+    "val_accuracy": 0.272
+  },
+  {
+    "trial": 6,
+    "parent_trial": 4,
+    "config": {
+      "resolution": 24,
+      "blocks": [
+        {
+          "channels": 12,
+          "kernel": 3,
+          "op": "conv",
+          "activation": "silu"
+        },
+        {
+          "channels": 24,
+          "kernel": 5,
+          "op": "conv",
+          "activation": "silu"
+        },
+        {
+          "channels": 12,
+          "kernel": 3,
+          "op": "conv",
+          "activation": "relu6"
+        },
+        {
+          "channels": 12,
+          "kernel": 3,
+          "op": "conv",
+          "activation": "relu6"
+        },
+        {
+          "channels": 24,
+          "kernel": 5,
+          "op": "separable",
+          "activation": "relu"
+        },
+        {
+          "channels": 24,
+          "kernel": 5,
+          "op": "conv",
+          "activation": "silu"
+        }
+      ]
+    },
+    "storage_bytes": 111808,
+    "p50_ms": 0.16712749999999998,
+    "p95_ms": 0.31253424999999996,
+    "peak_rss_mib": 46.12109375,
+    "peak_rss_growth_mib": 11.42578125,
+    "threads": 1,
+    "warmup": 20,
+    "repeats": 100,
+    "accepted": true,
+    "reason": "",
+    "val_accuracy": 0.3164
+  },
+  {
+    "trial": 7,
+    "parent_trial": 6,
+    "config": {
+      "resolution": 24,
+      "blocks": [
+        {
+          "channels": 12,
+          "kernel": 3,
+          "op": "conv",
+          "activation": "silu"
+        },
+        {
+          "channels": 24,
+          "kernel": 5,
+          "op": "conv",
+          "activation": "silu"
+        },
+        {
+          "channels": 12,
+          "kernel": 3,
+          "op": "conv",
+          "activation": "relu6"
+        },
+        {
+          "channels": 12,
+          "kernel": 3,
+          "op": "conv",
+          "activation": "relu6"
+        },
+        {
+          "channels": 24,
+          "kernel": 5,
+          "op": "conv",
+          "activation": "silu"
+        }
+      ]
+    },
+    "storage_bytes": 79724,
+    "p50_ms": 0.1478315,
+    "p95_ms": 0.18853404999999998,
+    "peak_rss_mib": 46.05859375,
+    "peak_rss_growth_mib": 11.3671875,
+    "threads": 1,
+    "warmup": 20,
+    "repeats": 100,
+    "accepted": true,
+    "reason": "",
+    "val_accuracy": 0.285
+  },
+  {
+    "trial": 8,
+    "parent_trial": null,
+    "config": {
+      "resolution": 24,
+      "blocks": [
+        {
+          "channels": 64,
+          "kernel": 5,
+          "op": "separable",
+          "activation": "silu"
+        },
+        {
+          "channels": 32,
+          "kernel": 3,
+          "op": "separable",
+          "activation": "relu"
+        },
+        {
+          "channels": 16,
+          "kernel": 5,
+          "op": "separable",
+          "activation": "silu"
+        }
+      ]
+    },
+    "storage_bytes": 21887,
+    "p50_ms": 0.191804,
+    "p95_ms": 0.3029109,
+    "peak_rss_mib": 46.36328125,
+    "peak_rss_growth_mib": 11.57421875,
+    "threads": 1,
+    "warmup": 20,
+    "repeats": 100,
+    "accepted": true,
+    "reason": "",
+    "val_accuracy": 0.2538
+  },
+  {
+    "trial": 9,
+    "parent_trial": 6,
+    "config": {
+      "resolution": 24,
+      "blocks": [
+        {
+          "channels": 24,
+          "kernel": 3,
+          "op": "conv",
+          "activation": "silu"
+        },
+        {
+          "channels": 24,
+          "kernel": 5,
+          "op": "conv",
+          "activation": "silu"
+        },
+        {
+          "channels": 12,
+          "kernel": 3,
+          "op": "conv",
+          "activation": "relu6"
+        },
+        {
+          "channels": 12,
+          "kernel": 3,
+          "op": "conv",
+          "activation": "relu6"
+        },
+        {
+          "channels": 24,
+          "kernel": 5,
+          "op": "separable",
+          "activation": "relu"
+        },
+        {
+          "channels": 24,
+          "kernel": 5,
+          "op": "conv",
+          "activation": "silu"
+        }
+      ]
+    },
+    "storage_bytes": 141904,
+    "p50_ms": 0.1972445,
+    "p95_ms": 0.36334614999999987,
+    "peak_rss_mib": 46.16015625,
+    "peak_rss_growth_mib": 11.46875,
+    "threads": 1,
+    "warmup": 20,
+    "repeats": 100,
+    "accepted": false,
+    "reason": "storage_bytes",
+    "val_accuracy": null
+  },
+  {
+    "trial": 10,
+    "parent_trial": 6,
+    "config": {
+      "resolution": 32,
+      "blocks": [
+        {
+          "channels": 12,
+          "kernel": 3,
+          "op": "conv",
+          "activation": "silu"
+        },
+        {
+          "channels": 24,
+          "kernel": 5,
+          "op": "conv",
+          "activation": "silu"
+        },
+        {
+          "channels": 12,
+          "kernel": 3,
+          "op": "conv",
+          "activation": "relu6"
+        },
+        {
+          "channels": 12,
+          "kernel": 3,
+          "op": "conv",
+          "activation": "relu6"
+        },
+        {
+          "channels": 24,
+          "kernel": 5,
+          "op": "separable",
+          "activation": "relu"
+        },
+        {
+          "channels": 24,
+          "kernel": 5,
+          "op": "conv",
+          "activation": "silu"
+        }
+      ]
+    },
+    "storage_bytes": 111808,
+    "p50_ms": 0.24845499999999998,
+    "p95_ms": 1.8147961999999997,
+    "peak_rss_mib": 46.1875,
+    "peak_rss_growth_mib": 11.5,
+    "threads": 1,
+    "warmup": 20,
+    "repeats": 100,
+    "accepted": true,
+    "reason": "",
+    "val_accuracy": 0.3198
+  },
+  {
+    "trial": 11,
+    "parent_trial": 6,
+    "config": {
+      "resolution": 24,
+      "blocks": [
+        {
+          "channels": 12,
+          "kernel": 3,
+          "op": "conv",
+          "activation": "silu"
+        },
+        {
+          "channels": 24,
+          "kernel": 5,
+          "op": "conv",
+          "activation": "silu"
+        },
+        {
+          "channels": 12,
+          "kernel": 3,
+          "op": "conv",
+          "activation": "relu6"
+        },
+        {
+          "channels": 12,
+          "kernel": 3,
+          "op": "conv",
+          "activation": "relu6"
+        },
+        {
+          "channels": 24,
+          "kernel": 5,
+          "op": "separable",
+          "activation": "relu"
+        },
+        {
+          "channels": 64,
+          "kernel": 5,
+          "op": "conv",
+          "activation": "silu"
+        }
+      ]
+    },
+    "storage_bytes": 209635,
+    "p50_ms": 0.1799715,
+    "p95_ms": 0.33360039999999996,
+    "peak_rss_mib": 46.21875,
+    "peak_rss_growth_mib": 11.52734375,
+    "threads": 1,
+    "warmup": 20,
+    "repeats": 100,
+    "accepted": false,
+    "reason": "storage_bytes",
+    "val_accuracy": null
+  },
+  {
+    "trial": 12,
+    "parent_trial": 10,
+    "config": {
+      "resolution": 16,
+      "blocks": [
+        {
+          "channels": 12,
+          "kernel": 3,
+          "op": "conv",
+          "activation": "silu"
+        },
+        {
+          "channels": 24,
+          "kernel": 5,
+          "op": "conv",
+          "activation": "silu"
+        },
+        {
+          "channels": 12,
+          "kernel": 3,
+          "op": "conv",
+          "activation": "relu6"
+        },
+        {
+          "channels": 12,
+          "kernel": 3,
+          "op": "conv",
+          "activation": "relu6"
+        },
+        {
+          "channels": 24,
+          "kernel": 5,
+          "op": "separable",
+          "activation": "relu"
+        },
+        {
+          "channels": 24,
+          "kernel": 5,
+          "op": "conv",
+          "activation": "silu"
+        }
+      ]
+    },
+    "storage_bytes": 111808,
+    "p50_ms": 0.087048,
+    "p95_ms": 0.15576955,
+    "peak_rss_mib": 46.0703125,
+    "peak_rss_growth_mib": 11.3828125,
+    "threads": 1,
+    "warmup": 20,
+    "repeats": 100,
+    "accepted": true,
+    "reason": "",
+    "val_accuracy": 0.3008
+  }
+]
